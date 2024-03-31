@@ -1,16 +1,10 @@
-words = ['Testing']
-life = 6
-guess = ''
+import random
 
-converted_word = ''.join(words)
+word_list = ['ardvark', 'baboon', 'camel']
+chosen_word = random.choice(word_list)
+print(chosen_word)
+guess =input("Guess The Letter: ")
 
-for w in words:
-    while life >= 0:
-        guess = input("Guess the Word: ")
-        if guess in words:
-            print("Correct")
-            for w in range(len(converted_word)):
-                print("Done")
-        else:
-            print("Wrong")
-            life = life - 1
+for c in chosen_word:
+    if c.lower() == guess.lower():
+        print("Correct")
