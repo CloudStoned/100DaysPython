@@ -1,40 +1,34 @@
 import random
 
-word_list = ['ardvark', 'baboon', 'camel','install', 'listen','stylistic']
+word_list = ['ardvark', 'baboon', 'camel','install', 'listen','stylistic','time','letter',
+            'number','nigerian','nanotech','water']
+
 chosen_word = random.choice(word_list)
-print(chosen_word)
+print(f'No of letters: {len(chosen_word)}')
+print(f'{chosen_word[0]} and {chosen_word[-1]}')
 
 display = []
-convert_chosen_word = ''
+end_of_game = False
+lives = 6
 
 for char in range(len(chosen_word)):
     display.append("_")
 
-end_of_game = False
-
 while not end_of_game:
-    guess = input("Guess The Letter: ").lower()
+    guess = input("Guess The Word: ").lower()
     for letter in range(len(chosen_word)):
         if guess == chosen_word[letter]:
             display[letter] = guess
+    
+    if guess not in chosen_word:
+        lives = lives - 1
+        print(f'Lives left: {lives}')
+        if lives == 0:
+            end_of_game = True
+            print("You Lose")
 
-    convert_chosen_word = ''.join(display)
     print(display)
 
     if "_" not in display:
         end_of_game = True
         print("You win")
-
-# for char in display:
-#     if char == '_':
-#         while convert_chosen_word != chosen_word:
-#             guess = input("Guess The Letter: ").lower()
-
-#             for letter in range(len(chosen_word)):
-#                 if guess == chosen_word[letter]:
-#                     display[letter] = guess
-
-#             convert_chosen_word = ''.join(display)
-#             print(display)
-#     else:
-#         break
