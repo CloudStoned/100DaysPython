@@ -3,7 +3,7 @@ import random
 word_list = ['ardvark', 'baboon', 'camel','install', 'listen','stylistic','time','letter',
             'number','nigerian','nanotech','water']
 
-chosen_word = random.choice(word_list)
+chosen_word = random.choice(word_list)w
 print(f'No of letters: {len(chosen_word)}')
 print(f'{chosen_word[0]} and {chosen_word[-1]}')
 
