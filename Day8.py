@@ -12,20 +12,16 @@ def encrypt (text, shift):
         char_pos = int(alphabet.index(char))
         char_shift = int(char_pos) + shift
         encrypted_text = alphabet[char_shift]
-        print(encrypted_text)
+        print(encrypted_text, end='')
 
-"""
-Course Version
-def encrypt(plain_text, shift_amount):
-    cipher_text = ""
-    for letter in plain_text:
-        pos = alphabet.index(letter)
-        new_pos = pos + shift_amount
-        new_let = alphabet[new_pos]
-        cipher_text += new_let
-    print(cipher_text)
-"""
+def decrypt(encryp_text, shift):
+    for char in encryp_text:
+        char_pos = int(alphabet.index(char))
+        char_shift = int(char_pos) - shift
+        decrypted_text = alphabet[char_shift]
+        print(decrypted_text, end='')
 
-encrypt(text,shift)
+decrypt(text,shift)
+
 
 
