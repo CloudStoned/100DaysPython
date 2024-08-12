@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <h2>{{ 5 * 6 }}</h2>
+    <h3> Random Number: {{num}}</h3>
+
+    <h1>Hey {{name}},</h1>
+    <h2>I think you are {{gender}}</h2>
+    <h3>And maybe {{age}} years old </h3>
+    <a href="{{ url_for('blog', num=3) }}"> Go To Blog</a>
+</body>
+<footer>
+    <p>Year: {{year}}</p>
+</footer>
+</html>
