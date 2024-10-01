@@ -18,7 +18,7 @@ Bootstrap5(app)
 # CREATE DATABASE
 class Base(DeclarativeBase):
     pass
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///C:/Users/Kraum/PROJECTS/100DaysPython/REST_API/Blog/posts.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///C:/Users/Kraum/PROJECTS/100DaysPython/PROJECTS/Blog/posts.db"
 db = SQLAlchemy(model_class=Base)
 db.init_app(app)
 
